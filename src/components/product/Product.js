@@ -1,6 +1,6 @@
 import React from 'react';
 import './Product.css';
-import { useStateValue } from './StateProvider';
+import { useStateValue } from "../../StateProvider";
 import StarIcon from "@material-ui/icons/Star";
 
 function Product({id, title, price, image, ratings}) {
