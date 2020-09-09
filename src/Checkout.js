@@ -12,6 +12,7 @@ function Checkout() {
         subTotal += Number(item.price)
         console.log(item.price)
     })
+    subTotal = subTotal.toFixed(2); //fixed to 2 decimal places
     
     return (
       <div className="checkout">

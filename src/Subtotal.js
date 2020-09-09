@@ -6,7 +6,7 @@ function Subtotal({subTotal, itemCount}) {
     return (
         <div className="subtotal">
             <CurrencyFormat
-                renderText={(value) => (
+                renderText={(subTotalvalue) => (
                     <>
                     <p>
                     Subtotal ({itemCount} items): <strong>${subTotal}</strong>      
