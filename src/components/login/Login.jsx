@@ -69,19 +69,17 @@ function Login() {
             </button>
           </form>
           <p className="login_terms">
-            By continuing, you agree to Amazon's Conditions of Use and Privacy
+            By continuing, you agree to Amaclone's Conditions of Use and Privacy
             Notice.
           </p>
         </div>
-        
-        <div className="login__newAccount">
-            
-            <button onClick={register} className="login__registerButton">
-                Create Your Amazon Account
-            </button>
-        </div>
 
-        
+        <div className="login__newAccount">
+          <h2><span>New to Amazon?</span></h2>
+          <button onClick={register} className="login__registerButton">
+            Create Your Amazon Account
+          </button>
+        </div>
       </div>
     );
 }

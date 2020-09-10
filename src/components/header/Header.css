@@ -44,6 +44,11 @@
     font-weight: 800;
 }
 
+.header__link {
+    color: white;
+    text-decoration: none;
+}
+
 .header__nav {
     display: flex;
     justify-content: space-evenly;
