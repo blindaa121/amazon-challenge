@@ -2,11 +2,12 @@ import React from 'react';
 import './Checkout.css';
 import Subtotal from '../subtotal/Subtotal';
 import { useStateValue } from "../../StateProvider";
+import BasketItem from '../basketitem/BasketItem'
 
 function Checkout() {
-    const [state, dispatch] = useStateValue();
-    const basketItems = Object.values(state.basket);
-
+    const [{basket}, dispatch] = useStateValue();
+    const basketItems = Object.values(basket);
+    
     let subTotal = 0;
     basketItems.forEach((item) => {
         subTotal += Number(item.price)
@@ -23,11 +24,10 @@ function Checkout() {
           />
 
           <div>
-            <h2 className="checkout__title">Your shopping Basket</h2>
-            {/* BasketItem */}
-            {/* BasketItem */}
-            {/* BasketItem */}
-            {/* BasketItem */}
+            <h2 className="checkout__title">Your Shopping Cart</h2>
+            {basketItems.map((item, idx) => (
+                <BasketItem id={item.id} title={item.title} ratings={item.ratings} price={item.price} image={item.image}/>
+            ))}
           </div>
         </div>
 
