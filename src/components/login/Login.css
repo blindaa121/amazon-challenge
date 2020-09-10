@@ -1,6 +1,6 @@
 .login {
     display: flex;
-    font-family: "Amazon Ember",Arial,sans-serif;
+    font-family: "Amazon Ember",Arial,sans-serif !important;
     flex-direction: column;
     align-items: center;
     background-color: white;
@@ -49,21 +49,32 @@
 }
 
 .login__container > form > h5 {
-    margin-bottom: 3px;
+    margin-bottom: 5px;
     font-size: 12px;
 }
 
 .login__container > form > input {
     height: 25px;
-    margin-bottom: 10px;
-    background-color: white;
+    margin-bottom: 12px;
+    background-color: #fff;
     width: 98%;
     border: 1px solid darkgrey;
     border-radius: 5px;
 }
 
+.login__container > form > input:hover {
+    cursor: pointer;
+}
+
+.login__container > form > input:focus {
+    outline: none;
+    border-color: #F0C14B;
+    box-shadow: 0 0 8px #F0C14B;
+    cursor: text;
+}
+
 .login__signInButton {
-    font-family: "Amazon Ember",Arial,sans-serif;
+    font-family: "Amazon Ember",Arial,sans-serif !important;
     width: 100%;
     height: 35px;
     background: #F0C14B;
@@ -110,7 +121,7 @@
     border-radius: 2px;
     width: 100%;
     height: 35px;
-    font-family: "Amazon Ember",Arial,sans-serif;
+    font-family: "Amazon Ember",Arial,sans-serif !important;
     border: 1px solid darkgray;
 }
 
@@ -165,7 +176,7 @@
    text-align: center; 
    font-size: 12px;
    font-weight: 200;
-   font-family: "Amazon Ember",Arial,sans-serif;
+   font-family: "Amazon Ember",Arial,sans-serif !important;
    color: gray;
    border-bottom: 1px solid lightgray; 
    line-height: 0.1em;

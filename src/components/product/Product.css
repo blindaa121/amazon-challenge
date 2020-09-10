@@ -20,18 +20,43 @@
   margin-bottom: 15px;
 }
 .product > button {
-  font-family: "Amazon Ember",Arial,sans-serif;
-  background: #F0C14B;
-  width: 175px;
-  height: 30px;
-  border: 1px solid;
-  margin-top: 10px;
-  border-color: #A88734 #9C7E31 #846A29;
-  color: #111;
+    font-family: "Amazon Ember",Arial,sans-serif !important;
+    width: 170px;
+    height: 35px;
+    background: #F0C14B;
+    border-color: #A88734 #9C7E31 #846A29;
+    border: 1px solid darkgray;
+    margin-top: 10px;
+    background: #F4E3B7;
+    background-image: -webkit-linear-gradient(top, #F4E3B7, #F0C14B);
+    background-image: -moz-linear-gradient(top, #F4E3B7, #F0C14B);
+    background-image: -ms-linear-gradient(top, #F4E3B7, #F0C14B);
+    background-image: -o-linear-gradient(top, #F4E3B7, #F0C14B);
+    background-image: linear-gradient(to bottom, #F4E3B7, #F0C14B);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 3px;
+    color: #000000;
+    font-size: 13px !important;
+    border: solid #A88734 1px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
 }
 
 .product > button:hover {
-  cursor: pointer;
+    border: solid #A88734 1px;
+    background: #E3D1A4;
+    background-image: -webkit-linear-gradient(top, #E3D1A4, #F0C14B);
+    background-image: -moz-linear-gradient(top, #E3D1A4, #F0C14B);
+    background-image: -ms-linear-gradient(top, #E3D1A4, #F0C14B);
+    background-image: -o-linear-gradient(top, #E3D1A4, #F0C14B);
+    background-image: linear-gradient(to bottom, #E3D1A4, #F0C14B);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    text-decoration: none;
 }
 
 .product > button:focus {

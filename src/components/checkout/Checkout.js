@@ -11,7 +11,7 @@ function Checkout() {
     let subTotal = 0;
     basketItems.forEach((item) => {
         subTotal += Number(item.price)
-        console.log(item.price)
+        // console.log(item.price)
     })
     subTotal = subTotal.toFixed(2); //fixed to 2 decimal places
     
