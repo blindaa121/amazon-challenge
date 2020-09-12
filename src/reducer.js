@@ -5,6 +5,7 @@ export const initialState = {
 
 export const getBasketTotal = (basket) => {
     let num = basket?.reduce((amount, item) => Number(item.price) + Number(amount), 0);
+    console.log(num);
     return num.toFixed(2);
 }
 

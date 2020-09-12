@@ -1,6 +1,7 @@
 .header {
     height: 80px;
     display: flex;
+    font-family: "Amazon Ember",Arial,sans-serif !important;;
     align-items: center;
     background-color: black;
     position: sticky;
@@ -45,6 +46,7 @@
 .header__optionLineOne {
     font-size: 12px;
     font-weight: 600;
+    color: lightgray;
 }
 
 .header__optionLineTwo {

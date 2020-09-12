@@ -1,4 +1,24 @@
 .payment {
+    /* background-color: white; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.payment__container {
+    font-family: "Amazon Ember",Arial,sans-serif !important;
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 10px 33.4px rgba(0, 0, 0, 0.086),
+    0 5px 5px rgba(0, 0, 0, 0.12);
+    min-height: 200px;
+    border-radius: 10px; 
+    width: 80%;
+    margin-top: 20px;
+    margin-bottom: 20px;
     background-color: white;
 }
 
@@ -8,6 +28,8 @@
     font-weight: 400;
     background-color: rgb(234, 237, 237);
     border-bottom: 1px solid lightgray;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .payment__container > h1 a {
@@ -45,7 +67,7 @@
     padding-bottom: 20px;
 }
 
-.payment__details > form > div > button  {
+.payment__button  {
     font-family: "Amazon Ember",Arial,sans-serif !important;
     width: 100%;
     height: 35px;
@@ -71,7 +93,7 @@
     text-align: center;
 }
 
-.payment__details > form > div > button:hover {
+.payment__button:hover {
     border: solid #A88734 1px;
     background: #E3D1A4;
     background-image: -webkit-linear-gradient(top, #E3D1A4, #F0C14B);
@@ -83,4 +105,41 @@
     -moz-border-radius: 5px;
     border-radius: 5px;
     text-decoration: none;
+}
+
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  margin: 8px;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: lightgreen transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

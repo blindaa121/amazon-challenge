@@ -80,71 +80,93 @@ function Payment() {
         }
 
         return (
-        <div className="payment">
+          <div className="payment">
             <div className="payment__container">
-            <h1>Checkout (<a href='./checkout'>{basket.length} items</a>)</h1>
-            {/* Payment section - delivery address */}
-            <div className="payment__section">
+              {/* Payment section - delivery address */}
+              <h1>
+                Checkout (<a href="./checkout">{basket.length} items</a>)
+              </h1>
+              <div className="payment__section">
                 <div className="payment__title">
-                <h3>Delivery Address</h3>
+                  <h3>Delivery Address</h3>
                 </div>
                 <div className="payment__address">
-                <p>{user?.email}</p>
-                <p>750 N King</p>
-                <p>San Jose, CA</p>
+                  <p>{user?.email}</p>
+                  <p>750 N King</p>
+                  <p>San Jose, CA</p>
                 </div>
-            </div>
+              </div>
 
-            <div className="payment__section">
+              <div className="payment__section">
                 <div className="payment__title">
-                <h3>Review items and delivery</h3>
+                  <h3>Review items and delivery</h3>
                 </div>
                 <div className="payment__items">
-                {basket.map((item) => (
+                  {basket.map((item) => (
                     <BasketItem
-                    id={item.id}
-                    title={item.title}
-                    ratings={item.ratings}
-                    price={item.price}
-                    image={item.image}
+                      id={item.id}
+                      title={item.title}
+                      ratings={item.ratings}
+                      price={item.price}
+                      image={item.image}
                     />
-                ))}
+                  ))}
                 </div>
-            </div>
+              </div>
 
-            <div className="payment__section">
+              <div className="payment__section">
                 <div className="payment__title">
-                <h3>Payment Method</h3>
+                  <h3>Payment Method</h3>
                 </div>
                 <div className="payment__details">
-                {/* stripe magic */}
-                <form onSubmit={handleSubmit}>
-                    <CardElement className='payment__cardInfo' onChange={handleChange} />
+                  {/* stripe magic */}
+                  <form onSubmit={handleSubmit}>
+                    <CardElement
+                      className="payment__cardInfo"
+                      onChange={handleChange}
+                    />
 
                     <div className="payment__priceContainer">
-                        <CurrencyFormat
-                            renderText={(subTotalvalue) => (
-                            <>
-                                <p>
-                                <strong>Order Total: ${getBasketTotal(basket)}</strong>
-                                </p>
-                            </>
-                            )}
-                            decimalScale={2}
-                            value={0}
-                            displayType={"text"}
-                            thousandSeperator={true}
-                            prefix={"$"}
-                        />
-                        <button disabled={processing || disabled || succeeded}>
-                            <span>{processing ? <p>Processing</p> : "Buy Now"}</span>
-                        </button>
+                      <CurrencyFormat
+                        renderText={(subTotalvalue) => (
+                          <>
+                            <p>
+                              <strong>
+                                Order Total: ${getBasketTotal(basket)}
+                              </strong>
+                            </p>
+                          </>
+                        )}
+                        decimalScale={2}
+                        value={0}
+                        displayType={"text"}
+                        thousandSeperator={true}
+                        prefix={"$"}
+                      />
+                      <div className="payment__process">
+                            {processing ? 
+
+                                <div class="lds-ring">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div> : 
+
+                                <button className="payment__button" disabled={processing || disabled || succeeded}>
+                                    <span>Buy Now</span>
+                                </button>
+                            }
+                      </div>
+
+                        
+                      
                     </div>
-                </form>
+                  </form>
                 </div>
+              </div>
             </div>
-            </div>
-        </div>
+          </div>
         );
     }
 

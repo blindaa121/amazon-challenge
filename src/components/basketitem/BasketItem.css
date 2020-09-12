@@ -12,7 +12,7 @@
 .basketitem {
     display: flex;
     padding-bottom: 10px;
-    padding-top: 10px;
+    padding-top: 30px;
 }
 
 .basketitem__title {
