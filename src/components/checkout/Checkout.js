@@ -2,7 +2,8 @@ import React from 'react';
 import './Checkout.css';
 import Subtotal from '../subtotal/Subtotal';
 import { useStateValue } from "../../StateProvider";
-import BasketItem from '../basketitem/BasketItem'
+import BasketItem from '../basketitem/BasketItem';
+import { subTotal, itemCount } from '../subtotal/Subtotal'
 
 function Checkout() {
     const [{basket}, dispatch] = useStateValue();

@@ -3,6 +3,11 @@ export const initialState = {
     user: null
 }
 
+export const getBasketTotal = (basket) => {
+    let num = basket?.reduce((amount, item) => Number(item.price) + Number(amount), 0);
+    return num.toFixed(2);
+}
+
 const reducer = (state, action) => {
     Object.freeze(state)
     let nextState = Object.assign({}, state);
@@ -21,6 +26,8 @@ const reducer = (state, action) => {
             return {...state, basket: newBasket};
         case 'SET_USER':
             return {...state, user: action.user}
+        case 'EMPTY_BASKET':
+            return {...state, basket: []}
         default:
             return state;
     }
