@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Payment.css';
 import { useStateValue } from '../../StateProvider';
 import BasketItem from '../basketitem/BasketItem';
@@ -84,7 +85,7 @@ function Payment() {
             <div className="payment__container">
               {/* Payment section - delivery address */}
               <h1>
-                Checkout (<a href="./checkout">{basket.length} items</a>)
+                Checkout (<Link to="/checkout">{basket.length} items</Link>)
               </h1>
               <div className="payment__section">
                 <div className="payment__title">
@@ -92,8 +93,9 @@ function Payment() {
                 </div>
                 <div className="payment__address">
                   <p>{user?.email}</p>
-                  <p>750 N King</p>
+                  <p>123 React Avenue</p>
                   <p>San Jose, CA</p>
+                  <p>95133</p>
                 </div>
               </div>
 

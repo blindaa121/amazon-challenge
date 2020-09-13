@@ -6,7 +6,8 @@
 }
 
 .payment__container {
-    font-family: "Amazon Ember",Arial,sans-serif !important;
+    /* font-family: "Amazon Ember",Arial,sans-serif !important; */
+    font-family: 'Noto Sans JP', sans-serif;
     box-shadow:
     0 2.8px 2.2px rgba(0, 0, 0, 0.034),
     0 6.7px 5.3px rgba(0, 0, 0, 0.048),
@@ -68,7 +69,8 @@
 }
 
 .payment__button  {
-    font-family: "Amazon Ember",Arial,sans-serif !important;
+    /* font-family: "Amazon Ember",Arial,sans-serif !important; */
+    font-family: 'Noto Sans JP', sans-serif;
     width: 100%;
     height: 35px;
     background: #F0C14B;

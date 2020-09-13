@@ -27,7 +27,9 @@
 }
 
 .basketitem__remove {
-    font-family: "Amazon Ember",Arial,sans-serif !important;
+    /* font-family: "Amazon Ember",Arial,sans-serif !important; */
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 400;
     width: 170px;
     height: 35px;
     background: #F0C14B;
